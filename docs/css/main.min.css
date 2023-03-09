@@ -767,6 +767,7 @@ h2 {
 .main .grid-child-11 {
   grid-area: rights;
   color: #D3D3D3;
+  padding-top: 100px;
 }
 @media screen and (max-width: 1200px) {
   .main .grid-child-11 {
@@ -779,6 +780,7 @@ h2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 100px;
 }
 @media screen and (max-width: 1200px) {
   .main .grid-child-12 {
