@@ -549,13 +549,22 @@ button {
   position: relative;
   z-index: 2;
 }
+@media screen and (max-width: 768px) {
+  .design .grid {
+    grid-template-columns: 14.94% 32.18% 52.87%;
+  }
+}
 .design .hero {
   padding: 74px 0 100px 0;
   background-image: url("../img/design-hero.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  min-height: 1000px;
+}
+@media screen and (max-width: 768px) {
+  .design .hero {
+    padding: 35px 0 315px 0;
+  }
 }
 .design .hero .container {
   position: relative;
@@ -568,7 +577,7 @@ button {
   width: 2074px;
   height: 903px;
   background-image: url("../img/decor.svg");
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   z-index: 1;
@@ -577,11 +586,19 @@ button {
 }
 @media screen and (max-width: 768px) {
   .design .hero .container::after {
-    display: none;
+    left: 0px;
+    top: 0px;
+    width: 422px;
+    height: 1035px;
   }
 }
 .design .hero .grid {
-  grid-template-areas: "logo . menu menu menu social" "line line line line line line" "copyright . . . slogan slogan" "header header header header buttons buttons";
+  grid-template-areas: "logo . menu menu menu social" "line line line line line line" "copyright . . . slogan slogan" "header header header header header header" "header2 header2 header2 header2 header2 header2" "header3 header3 header3 header3 buttons buttons";
+}
+@media screen and (max-width: 768px) {
+  .design .hero .grid {
+    grid-template-areas: "logo logo menu" "line line line" "header header header" ". header2 header2" ". header3 header3" ". slogan slogan" ". buttons buttons";
+  }
 }
 .design .hero .grid-child-1 {
   grid-area: logo;
@@ -591,10 +608,20 @@ button {
   grid-area: menu;
   align-self: center;
 }
+@media screen and (max-width: 768px) {
+  .design .hero .grid-child-2 {
+    justify-self: end;
+  }
+}
 .design .hero .grid-child-3 {
   grid-area: social;
   align-self: center;
   justify-self: end;
+}
+@media screen and (max-width: 768px) {
+  .design .hero .grid-child-3 {
+    display: none;
+  }
 }
 .design .hero .grid-child-4 {
   grid-area: line;
@@ -602,24 +629,69 @@ button {
 .design .hero .grid-child-5 {
   grid-area: copyright;
 }
+@media screen and (max-width: 768px) {
+  .design .hero .grid-child-5 {
+    display: none;
+  }
+}
 .design .hero .grid-child-6 {
   grid-area: slogan;
-  margin-bottom: 210px;
 }
 .design .hero .grid-child-7 {
   grid-area: header;
 }
+@media screen and (max-width: 768px) {
+  .design .hero .grid-child-7 h1 {
+    font-size: 46px;
+  }
+}
 .design .hero .grid-child-8 {
+  grid-area: header2;
+}
+.design .hero .grid-child-8 h2 {
+  font-size: 140px;
+  margin-left: 262px;
+}
+@media screen and (max-width: 768px) {
+  .design .hero .grid-child-8 h2 {
+    font-size: 46px;
+    margin-left: initial;
+  }
+}
+.design .hero .grid-child-9 {
+  grid-area: header3;
+}
+.design .hero .grid-child-9 h2 {
+  font-size: 140px;
+  margin-left: 135px;
+}
+@media screen and (max-width: 768px) {
+  .design .hero .grid-child-9 h2 {
+    font-size: 46px;
+    margin-left: initial;
+  }
+}
+.design .hero .grid-child-10 {
   grid-area: buttons;
   align-self: end;
 }
 .design .hero__logo img {
   width: 146px;
 }
+@media screen and (max-width: 768px) {
+  .design .hero__logo img {
+    width: 93px;
+  }
+}
 .design .hero__line {
   height: 1px;
   background-color: var(--clr-white);
   margin: 70px 0 100px 0;
+}
+@media screen and (max-width: 768px) {
+  .design .hero__line {
+    margin: 22px 0 118px 0;
+  }
 }
 .design .hero__copyright {
   text-transform: uppercase;
@@ -628,6 +700,13 @@ button {
 .design .hero__slogan {
   font-size: 22px;
   line-height: 1.6;
+  margin-bottom: 210px;
+}
+@media screen and (max-width: 768px) {
+  .design .hero__slogan {
+    font-size: 13px;
+    margin: 31px 0 42px 0;
+  }
 }
 .design .hero__title span:nth-child(2) {
   margin-left: 262px;
@@ -638,6 +717,12 @@ button {
 .design .hero__btns {
   display: flex;
   justify-content: space-between;
+}
+@media screen and (max-width: 768px) {
+  .design .hero__btns .btn {
+    width: 100%;
+    max-width: 213px;
+  }
 }
 
 .dot {
@@ -1204,6 +1289,11 @@ button {
     display: block;
   }
 }
+@media screen and (max-width: 768px) {
+  .menu__dropdown {
+    display: none;
+  }
+}
 .menu__list {
   display: flex;
   align-items: center;
@@ -1232,6 +1322,9 @@ button {
     color: var(--clr-white);
   }
 }
+.menu.open .menu__toggle {
+  z-index: 30;
+}
 .menu.open .menu__toggle span {
   top: 27px;
   height: 2px;
@@ -1252,7 +1345,6 @@ button {
 .menu.open .menu__toggle span:nth-child(4) {
   display: none;
 }
-
 .next, .prev {
   width: 160px;
   height: 160px;
