@@ -724,6 +724,81 @@ button {
     max-width: 213px;
   }
 }
+@media screen and (max-width: 768px) {
+  .design .hero__designed {
+    display: black;
+    text-decoration: underline;
+    color: var(--clr-grey);
+  }
+  .design .hero__designed a {
+    color: var(--clr-white);
+  }
+}
+.design .hero__social-dot.social-dot {
+  display: none;
+}
+.design .hero .second-grid {
+  display: none;
+  box-sizing: border-box;
+  grid-template-columns: 31.05% 8.6% 4.13% 28.2% 4.24% 23.66%;
+  grid-template-rows: auto;
+  align-items: start;
+  position: relative;
+  z-index: 30;
+}
+@media screen and (max-width: 768px) {
+  .design .hero .second-grid {
+    display: grid;
+    grid-template-columns: 14.94% 32.18% 52.87%;
+    grid-template-areas: "link1 link1 link1" ". link2 link2" ". link3 link3" ". link4 link4" ". link5 link5" ". social social" ". designed designed";
+    position: fixed;
+    left: 0;
+    top: -150%;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    padding: 185px 40px 40px 40px;
+    transition: 1s;
+  }
+  .design .hero .second-grid::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px);
+    z-index: 5;
+  }
+}
+.design .hero .second-grid.open {
+  top: 0;
+}
+.design .hero .second-grid-child {
+  position: relative;
+  z-index: 10;
+}
+.design .hero .second-grid-child1 {
+  grid-area: link1;
+}
+.design .hero .second-grid-child2 {
+  grid-area: link2;
+}
+.design .hero .second-grid-child3 {
+  grid-area: link3;
+}
+.design .hero .second-grid-child4 {
+  grid-area: link4;
+}
+.design .hero .second-grid-child5 {
+  grid-area: link5;
+}
+.design .hero .second-grid-child6 {
+  grid-area: social;
+}
+.design .hero .second-grid-child7 {
+  grid-area: designed;
+}
 
 .dot {
   display: flex;
@@ -1306,23 +1381,8 @@ button {
 .menu__item + .menu__item {
   margin-left: 40px;
 }
-.menu__social-dot.social-dot {
-  display: none;
-}
-.menu__designed {
-  display: none;
-}
-@media screen and (max-width: 768px) {
-  .menu__designed {
-    display: black;
-    text-decoration: underline;
-    color: var(--clr-grey);
-  }
-  .menu__designed a {
-    color: var(--clr-white);
-  }
-}
 .menu.open .menu__toggle {
+  position: relative;
   z-index: 30;
 }
 .menu.open .menu__toggle span {
