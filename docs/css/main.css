@@ -722,13 +722,16 @@ button {
 }
 .design .hero__btns {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
-@media screen and (max-width: 768px) {
-  .design .hero__btns .btn {
-    width: 100%;
-    max-width: 213px;
-  }
+.design .hero__btns .down {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: auto;
+}
+.design .hero__btns .btn {
+  flex-basis: 366px;
+  margin-left: 10px;
 }
 @media screen and (max-width: 768px) {
   .design .hero__designed {
@@ -1347,6 +1350,7 @@ button {
 }
 .menu__toggle {
   display: none;
+  background-color: var(--clr-white);
   font-size: 0;
   height: 55px;
   width: 55px;
