@@ -762,31 +762,21 @@ button {
     grid-template-columns: 14.94% 32.18% 52.87%;
     grid-template-areas: "link1 link1 link1" ". link2 link2" ". link3 link3" ". link4 link4" ". link5 link5" ". social social" ". designed designed";
     position: fixed;
-    left: -100%;
-    top: 0;
-    width: 100%;
+    left: 0;
+    right: 0;
+    top: -150%;
     height: 100%;
     overflow: auto;
     padding: 185px 40px 40px 40px;
     transition: 1s;
-  }
-  .design .hero .second-grid::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("../img/design-hero.png");
+    background-image: url("../img/design-hero-dropdown.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    filter: blur(10px);
-    z-index: 5;
   }
 }
 .design .hero .second-grid.open {
-  left: 0;
+  top: 0;
 }
 .design .hero .second-grid-child {
   position: relative;
