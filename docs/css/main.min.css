@@ -973,10 +973,19 @@ button {
   padding: 246px 0 246px;
   background-color: var(--clr-white-bg);
   color: var(--clr-black);
-  min-height: 2166px;
+}
+@media screen and (max-width: 768px) {
+  .design .services {
+    padding: 75px 0 103px 0;
+  }
 }
 .design .services .grid {
   grid-template-areas: "name . title1 title1 title1 title1" "title2 title2 title2 title2 title2 title2" "title3 title3 title3 title3 title3 title3" ". . line1 line1 line1 line1" "counter1 . item1 item1 desc1 desc1" ". . line2 line2 line2 line2" "counter2 . item2 item2 desc2 desc2" ". . line3 line3 line3 line3" "counter3 . item3 item3 desc3 desc3" ". . line4 line4 line4 line4" "counter4 . item4 item4 desc4 desc4";
+}
+@media screen and (max-width: 768px) {
+  .design .services .grid {
+    grid-template-areas: "name title1 title1" ". title2 title2" ". title3 title3" ". line1 line1" "counter1 item1 desc1" ". line2 line2" "counter2 item2 desc2" ". line3 line3" "counter3 item3 desc3" ". line4 line4" "counter4 item4 desc4";
+  }
 }
 .design .services .grid-child {
   align-items: start;
@@ -1045,25 +1054,66 @@ button {
   color: var(--clr-darkgrey);
   font-size: 17px;
 }
+@media screen and (max-width: 768px) {
+  .design .services__name {
+    font-size: 10px;
+  }
+}
 .design .services__title1, .design .services__title2, .design .services__title3 {
   line-height: 82.5%;
 }
+@media screen and (max-width: 768px) {
+  .design .services__title1, .design .services__title2, .design .services__title3 {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .design .services__title1 {
+    margin-left: 84px;
+  }
+}
 .design .services__title2 {
   margin-left: 86px;
+}
+@media screen and (max-width: 768px) {
+  .design .services__title2 {
+    margin-left: 0;
+  }
 }
 .design .services__title3 {
   margin-left: 218px;
   margin-bottom: 175px;
 }
+@media screen and (max-width: 768px) {
+  .design .services__title3 {
+    margin-left: 109px;
+    margin-bottom: 60px;
+  }
+}
 .design .services__line1, .design .services__line2, .design .services__line3, .design .services__line4 {
   margin-bottom: 113px;
   border-bottom: 1px solid #000000;
 }
+@media screen and (max-width: 768px) {
+  .design .services__line1, .design .services__line2, .design .services__line3, .design .services__line4 {
+    margin-bottom: 41px;
+  }
+}
 .design .services__counter1, .design .services__counter2, .design .services__counter3, .design .services__counter4 {
   font-size: 22px;
 }
+@media screen and (max-width: 768px) {
+  .design .services__counter1, .design .services__counter2, .design .services__counter3, .design .services__counter4 {
+    font-size: 10px;
+  }
+}
 .design .services__item1, .design .services__desc1, .design .services__item2, .design .services__desc2, .design .services__item3, .design .services__desc3, .design .services__item4, .design .services__desc4 {
   margin-bottom: 58px;
+}
+@media screen and (max-width: 768px) {
+  .design .services__item1, .design .services__desc1, .design .services__item2, .design .services__desc2, .design .services__item3, .design .services__desc3, .design .services__item4, .design .services__desc4 {
+    margin-bottom: 35px;
+  }
 }
 .design .services__item1, .design .services__item2, .design .services__item3, .design .services__item4 {
   font-family: "Stolzl", sans-serif;
@@ -1071,15 +1121,37 @@ button {
   line-height: 109.5%;
   font-size: 33px;
 }
+@media screen and (max-width: 768px) {
+  .design .services__item1, .design .services__item2, .design .services__item3, .design .services__item4 {
+    margin-bottom: 35px;
+    font-size: 13px;
+    margin-right: 10px;
+  }
+}
 .design .services__desc1, .design .services__desc2, .design .services__desc3, .design .services__desc4 {
   line-height: 160%;
+}
+@media screen and (max-width: 768px) {
+  .design .services__desc1, .design .services__desc2, .design .services__desc3, .design .services__desc4 {
+    font-size: 10px;
+  }
 }
 .design .services__img-wrap {
   align-self: stretch;
   position: relative;
 }
+@media screen and (max-width: 768px) {
+  .design .services__img-wrap {
+    align-self: initial;
+  }
+}
 .design .services__img-wrap:hover {
   cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  .design .services__img-wrap:hover {
+    cursor: initial;
+  }
 }
 .design .services__img-wrap:hover .services__img {
   opacity: 1;
@@ -1092,6 +1164,11 @@ button {
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s;
+}
+@media screen and (max-width: 768px) {
+  .design .services__img {
+    display: none;
+  }
 }
 .dot {
   display: flex;
