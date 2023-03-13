@@ -351,6 +351,7 @@ template {
   --clr-orange: #B5773E;
   --clr-darkgrey: #424242;
   --clr-social: #BEBEBE;
+  --clr-white-bg: #F3F3F3;
 }
 
 *,
@@ -545,6 +546,7 @@ button {
   display: grid;
   grid-template-columns: 31.05% 8.6% 4.13% 28.2% 4.24% 23.66%;
   grid-template-rows: auto;
+  gap: 2px;
   align-items: start;
   position: relative;
   z-index: 2;
@@ -967,6 +969,130 @@ button {
   grid-area: designed;
 }
 
+.design .services {
+  padding: 246px 0 246px;
+  background-color: var(--clr-white-bg);
+  color: var(--clr-black);
+  min-height: 2166px;
+}
+.design .services .grid {
+  grid-template-areas: "name . title1 title1 title1 title1" "title2 title2 title2 title2 title2 title2" "title3 title3 title3 title3 title3 title3" ". . line1 line1 line1 line1" "counter1 . item1 item1 desc1 desc1" ". . line2 line2 line2 line2" "counter2 . item2 item2 desc2 desc2" ". . line3 line3 line3 line3" "counter3 . item3 item3 desc3 desc3" ". . line4 line4 line4 line4" "counter4 . item4 item4 desc4 desc4";
+}
+.design .services .grid-child {
+  align-items: start;
+}
+.design .services .grid-child-1 {
+  grid-area: name;
+}
+.design .services .grid-child-2 {
+  grid-area: title1;
+}
+.design .services .grid-child-3 {
+  grid-area: title2;
+}
+.design .services .grid-child-4 {
+  grid-area: title3;
+}
+.design .services .grid-child-5 {
+  grid-area: line1;
+}
+.design .services .grid-child-6 {
+  grid-area: counter1;
+}
+.design .services .grid-child-7 {
+  grid-area: item1;
+}
+.design .services .grid-child-8 {
+  grid-area: desc1;
+}
+.design .services .grid-child-9 {
+  grid-area: line2;
+}
+.design .services .grid-child-10 {
+  grid-area: counter2;
+}
+.design .services .grid-child-11 {
+  grid-area: item2;
+}
+.design .services .grid-child-12 {
+  grid-area: desc2;
+}
+.design .services .grid-child-13 {
+  grid-area: line3;
+}
+.design .services .grid-child-14 {
+  grid-area: counter3;
+}
+.design .services .grid-child-15 {
+  grid-area: item3;
+}
+.design .services .grid-child-16 {
+  grid-area: desc3;
+}
+.design .services .grid-child-17 {
+  grid-area: line4;
+}
+.design .services .grid-child-18 {
+  grid-area: counter4;
+}
+.design .services .grid-child-19 {
+  grid-area: item4;
+}
+.design .services .grid-child-20 {
+  grid-area: desc4;
+}
+.design .services__name {
+  color: var(--clr-darkgrey);
+  font-size: 17px;
+}
+.design .services__title1, .design .services__title2, .design .services__title3 {
+  line-height: 82.5%;
+}
+.design .services__title2 {
+  margin-left: 86px;
+}
+.design .services__title3 {
+  margin-left: 218px;
+  margin-bottom: 175px;
+}
+.design .services__line1, .design .services__line2, .design .services__line3, .design .services__line4 {
+  margin-bottom: 113px;
+  border-bottom: 1px solid #000000;
+}
+.design .services__counter1, .design .services__counter2, .design .services__counter3, .design .services__counter4 {
+  font-size: 22px;
+}
+.design .services__item1, .design .services__desc1, .design .services__item2, .design .services__desc2, .design .services__item3, .design .services__desc3, .design .services__item4, .design .services__desc4 {
+  margin-bottom: 58px;
+}
+.design .services__item1, .design .services__item2, .design .services__item3, .design .services__item4 {
+  font-family: "Stolzl", sans-serif;
+  font-weight: 400;
+  line-height: 109.5%;
+  font-size: 33px;
+}
+.design .services__desc1, .design .services__desc2, .design .services__desc3, .design .services__desc4 {
+  line-height: 160%;
+}
+.design .services__img-wrap {
+  align-self: stretch;
+  position: relative;
+}
+.design .services__img-wrap:hover {
+  cursor: pointer;
+}
+.design .services__img-wrap:hover .services__img {
+  opacity: 1;
+  visibility: visible;
+}
+.design .services__img {
+  position: absolute;
+  top: -70%;
+  right: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+}
 .dot {
   display: flex;
   justify-content: center;
