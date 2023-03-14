@@ -551,6 +551,11 @@ button {
   /*slider*/
   /*slider*/
 }
+@media screen and (max-width: 768px) {
+  .design .cases {
+    display: none;
+  }
+}
 .design .cases .container {
   position: relative;
 }
@@ -605,6 +610,10 @@ button {
 .design .cases__btns {
   display: flex;
   margin-bottom: 112px;
+}
+.design .cases__btns .prev,
+.design .cases__btns .next {
+  flex: 0 0 auto;
 }
 .design .cases__btns .next {
   margin-left: -10px;
