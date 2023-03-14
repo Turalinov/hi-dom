@@ -440,11 +440,21 @@ h1 {
   line-height: 1.15;
   text-transform: uppercase;
 }
+@media screen and (max-width: 1920px) {
+  h1 {
+    font-size: 6.8vw;
+  }
+}
 
 h2 {
   font-size: 130px;
   line-height: 1.07;
   text-transform: uppercase;
+}
+@media screen and (max-width: 1920px) {
+  h2 {
+    font-size: 6.8vw;
+  }
 }
 
 button {
@@ -467,41 +477,36 @@ button {
   height: 100%;
   max-width: 1720px;
   border: 1px solid transparent;
+  z-index: 1;
 }
 @media screen and (max-width: 1920px) {
   .container {
     margin: 0px 100px;
-    border: 1px solid blue;
   }
 }
 @media screen and (max-width: 1600px) {
   .container {
     margin: 0px 100px;
-    border: 1px solid magenta;
   }
 }
 @media screen and (max-width: 1200px) {
   .container {
     margin: 0px 100px;
-    border: 1px solid red;
   }
 }
 @media screen and (max-width: 992px) {
   .container {
     margin: 0px 40px;
-    border: 1px solid green;
   }
 }
 @media screen and (max-width: 768px) {
   .container {
     margin: 0px 40px;
-    border: 1px solid orange;
   }
 }
 @media screen and (max-width: 405px) {
   .container {
     margin: 0px 40px;
-    border: 1px solid green;
   }
 }
 
@@ -539,6 +544,91 @@ button {
   color: var(--clr-white);
   background-color: transparent;
   border: 1px solid var(--clr-white);
+}
+
+.design .cases {
+  padding: 295px 0 0 0;
+  /*slider*/
+  /*slider*/
+}
+.design .cases .container {
+  position: relative;
+}
+.design .cases .container::after {
+  content: "";
+  position: absolute;
+  right: -679px;
+  top: -105px;
+  width: 2074.79px;
+  height: 847.46px;
+  background-image: url("../img/decor-hero-design.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 1;
+  pointer-events: none;
+  transform: rotate(321deg);
+}
+.design .cases .grid {
+  grid-template-areas: "name . title1 title1 title1 title1" "title2 title2 title2 title2 title2 title2" ". . desc desc btns btns" "slider slider slider slider slider slider";
+}
+.design .cases .grid-child-1 {
+  grid-area: name;
+}
+.design .cases .grid-child-2 {
+  grid-area: title1;
+}
+.design .cases .grid-child-3 {
+  grid-area: title2;
+}
+.design .cases .grid-child-4 {
+  grid-area: desc;
+  align-self: center;
+}
+.design .cases .grid-child-5 {
+  grid-area: btns;
+}
+.design .cases .grid-child-6 {
+  grid-area: slider;
+}
+.design .cases__name {
+  color: var(--clr-grey);
+}
+.design .cases__title2 {
+  margin-left: 50px;
+  margin-bottom: 90px;
+}
+.design .cases__desc {
+  font-size: 22px;
+  max-width: 230px;
+}
+.design .cases__btns {
+  display: flex;
+  margin-bottom: 112px;
+}
+.design .cases__btns .next {
+  margin-left: -10px;
+}
+.design .cases__slider {
+  overflow: initial;
+}
+.design .cases__slider .cases__item {
+  width: 534px;
+  height: 534px;
+}
+.design .cases__marquee {
+  position: relative;
+  z-index: 2;
+}
+.design .cases__bg {
+  padding-top: 1140px;
+  background-image: url("../img/cases-design-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: -130px;
+  position: relative;
+  z-index: 1;
 }
 
 .design .grid {
@@ -715,6 +805,7 @@ button {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  height: 100vh;
 }
 @media screen and (max-width: 768px) {
   .design .hero {
@@ -737,6 +828,7 @@ button {
   background-repeat: no-repeat;
   background-position: center;
   z-index: 1;
+  pointer-events: none;
   transform: rotate(-45.11deg);
 }
 @media screen and (max-width: 768px) {
@@ -807,6 +899,11 @@ button {
   font-size: 140px;
   margin-left: 262px;
 }
+@media screen and (max-width: 1920px) {
+  .design .hero .grid-child-8 h2 {
+    font-size: 6.8vw;
+  }
+}
 @media screen and (max-width: 768px) {
   .design .hero .grid-child-8 h2 {
     font-size: 46px;
@@ -819,6 +916,11 @@ button {
 .design .hero .grid-child-9 h2 {
   font-size: 140px;
   margin-left: 135px;
+}
+@media screen and (max-width: 1920px) {
+  .design .hero .grid-child-9 h2 {
+    font-size: 6.8vw;
+  }
 }
 @media screen and (max-width: 768px) {
   .design .hero .grid-child-9 h2 {
@@ -845,7 +947,7 @@ button {
 .design .hero__line {
   height: 1px;
   background-color: var(--clr-white);
-  margin: 70px 0 100px 0;
+  margin: 60px 0 90px 0;
   position: relative;
   z-index: 50;
 }
@@ -861,7 +963,6 @@ button {
 .design .hero__slogan {
   font-size: 22px;
   line-height: 1.6;
-  margin-bottom: 210px;
 }
 @media screen and (max-width: 768px) {
   .design .hero__slogan {
@@ -1717,10 +1818,14 @@ button {
 .marquee {
   width: 100%;
   height: 256px;
-  border: 1px solid white;
   background-image: url("../img/marquee-white.svg");
   animation: 25s anim1 infinite linear;
   animation-delay: 2s;
+}
+@media screen and (max-width: 768px) {
+  .marquee {
+    transform: skale(1);
+  }
 }
 
 @keyframes anim1 {
