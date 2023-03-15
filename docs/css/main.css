@@ -553,7 +553,7 @@ button {
 }
 @media screen and (max-width: 768px) {
   .design .cases {
-    display: none;
+    padding: 75px 0 0 0;
   }
 }
 .design .cases .container {
@@ -574,8 +574,18 @@ button {
   pointer-events: none;
   transform: rotate(321deg);
 }
+@media screen and (max-width: 768px) {
+  .design .cases .container::after {
+    display: none;
+  }
+}
 .design .cases .grid {
   grid-template-areas: "name . title1 title1 title1 title1" "title2 title2 title2 title2 title2 title2" ". . desc desc btns btns" "slider slider slider slider slider slider";
+}
+@media screen and (max-width: 768px) {
+  .design .cases .grid {
+    grid-template-areas: "title1 title1 title1" "title2 title2 title2" ". desc btns" "slider slider slider";
+  }
 }
 .design .cases .grid-child-1 {
   grid-area: name;
@@ -590,8 +600,18 @@ button {
   grid-area: desc;
   align-self: center;
 }
+@media screen and (max-width: 768px) {
+  .design .cases .grid-child-4 {
+    align-self: start;
+  }
+}
 .design .cases .grid-child-5 {
   grid-area: btns;
+}
+@media screen and (max-width: 768px) {
+  .design .cases .grid-child-5 {
+    justify-self: end;
+  }
 }
 .design .cases .grid-child-6 {
   grid-area: slider;
@@ -599,17 +619,49 @@ button {
 .design .cases__name {
   color: var(--clr-grey);
 }
+@media screen and (max-width: 768px) {
+  .design .cases__name {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .design .cases__title1, .design .cases__title2 {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .design .cases__title1 {
+    margin-left: 10px;
+  }
+}
 .design .cases__title2 {
   margin-left: 50px;
   margin-bottom: 90px;
+}
+@media screen and (max-width: 768px) {
+  .design .cases__title2 {
+    margin-left: 26px;
+    margin-bottom: 40px;
+  }
 }
 .design .cases__desc {
   font-size: 22px;
   max-width: 230px;
 }
+@media screen and (max-width: 768px) {
+  .design .cases__desc {
+    font-size: 13px;
+    min-width: 147px;
+  }
+}
 .design .cases__btns {
   display: flex;
   margin-bottom: 112px;
+}
+@media screen and (max-width: 768px) {
+  .design .cases__btns {
+    margin-bottom: 50px;
+  }
 }
 .design .cases__btns .prev,
 .design .cases__btns .next {
@@ -620,10 +672,22 @@ button {
 }
 .design .cases__slider {
   overflow: initial;
+  margin-bottom: 193px;
+}
+@media screen and (max-width: 768px) {
+  .design .cases__slider {
+    margin-bottom: 102px;
+  }
 }
 .design .cases__slider .cases__item {
   width: 534px;
   height: 534px;
+}
+@media screen and (max-width: 768px) {
+  .design .cases__slider .cases__item {
+    width: 206px;
+    height: 206px;
+  }
 }
 .design .cases__marquee {
   position: relative;
@@ -638,6 +702,12 @@ button {
   margin-top: -130px;
   position: relative;
   z-index: 1;
+}
+@media screen and (max-width: 768px) {
+  .design .cases__bg {
+    padding-top: 473px;
+    margin-top: -45px;
+  }
 }
 
 .design .grid {
@@ -1828,12 +1898,13 @@ button {
   width: 100%;
   height: 256px;
   background-image: url("../img/marquee-white.svg");
-  animation: 25s anim1 infinite linear;
+  animation: 50s anim1 infinite linear;
   animation-delay: 2s;
 }
 @media screen and (max-width: 768px) {
   .marquee {
-    transform: skale(1);
+    height: 76.5px;
+    background-image: url("../img/marquee-white-mobile.svg");
   }
 }
 
@@ -1843,6 +1914,9 @@ button {
   }
   to {
     background-position: -3953px 0;
+    @media screen and (max-width: 768px) {
+      background-position: -668px 0;
+    }
   }
 }
 .menu__toggle {
