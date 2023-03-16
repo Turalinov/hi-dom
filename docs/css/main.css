@@ -731,6 +731,11 @@ button {
   background-color: var(--clr-black);
   padding: 225px 0 190px;
 }
+@media screen and (max-width: 768px) {
+  .design .consultation {
+    display: none;
+  }
+}
 .design .consultation .grid {
   grid-template-areas: "title1 title1 title1 title1 title1 title1" "title2 title2 title2 title2 title2 title2" ". . form form . .";
 }
