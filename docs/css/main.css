@@ -1162,6 +1162,64 @@ button {
   grid-area: designed;
 }
 
+.design .procedure {
+  padding: 260px 0 0 0;
+  background-color: var(--clr-white-bg);
+  color: var(--clr-black);
+  font-size: 22px;
+}
+.design .procedure .grid {
+  grid-template-areas: ". . title1 title1 title1 title1" ". title2 title2 title2 title2 title2" "img . counter1 item1 counter2 item2" "img . counter3 item3 counter4 item4" "img . counter5 item5 counter6 item6";
+}
+.design .procedure .grid-child-1 {
+  grid-area: title1;
+}
+.design .procedure .grid-child-2 {
+  grid-area: title2;
+}
+.design .procedure .grid-child-3 {
+  grid-area: img;
+}
+.design .procedure .grid-child-4 {
+  grid-area: counter1;
+}
+.design .procedure .grid-child-5 {
+  grid-area: item1;
+}
+.design .procedure .grid-child-6 {
+  grid-area: counter2;
+}
+.design .procedure .grid-child-7 {
+  grid-area: item2;
+}
+.design .procedure .grid-child-8 {
+  grid-area: counter3;
+}
+.design .procedure .grid-child-9 {
+  grid-area: item3;
+}
+.design .procedure .grid-child-10 {
+  grid-area: counter4;
+}
+.design .procedure .grid-child.grid-child-11 {
+  grid-area: item4;
+}
+.design .procedure .grid-child-12 {
+  grid-area: counter5;
+}
+.design .procedure .grid-child-13 {
+  grid-area: item5;
+}
+.design .procedure .grid-child-14 {
+  grid-area: counter6;
+}
+.design .procedure .grid-child-15 {
+  grid-area: item6;
+}
+.design .procedure__title2 {
+  margin-left: -164px;
+  margin-bottom: 116px;
+}
 .design .services {
   padding: 246px 0 246px;
   background-color: var(--clr-white-bg);
