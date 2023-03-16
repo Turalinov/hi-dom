@@ -422,6 +422,10 @@ input:not([type=checkbox]):not([type=radio])::placeholder,
 select::placeholder, textarea::placeholder {
   color: var(--clr-text);
 }
+input:not([type=checkbox]):not([type=radio]):focus,
+select:focus, textarea:focus {
+  outline: none;
+}
 
 h1,
 h2,
@@ -723,6 +727,48 @@ button {
   }
 }
 
+.design .consultation {
+  background-color: var(--clr-black);
+  padding: 225px 0 190px;
+}
+.design .consultation .grid {
+  grid-template-areas: "title1 title1 title1 title1 title1 title1" "title2 title2 title2 title2 title2 title2" ". . form form . .";
+}
+.design .consultation .grid-child-1 {
+  grid-area: title1;
+}
+.design .consultation .grid-child-2 {
+  grid-area: title2;
+}
+.design .consultation .grid-child-3 {
+  grid-area: form;
+}
+.design .consultation__title1 span {
+  position: relative;
+}
+.design .consultation__title1 span::after {
+  content: "?";
+  position: absolute;
+  font-size: 400px;
+  line-height: 0.7;
+  top: 0;
+  left: calc(100% + 100px);
+}
+.design .consultation__title2 {
+  margin-left: 265px;
+  margin-bottom: 107px;
+  position: relative;
+}
+.design .consultation__title2::after {
+  content: "";
+  position: absolute;
+  width: 864px;
+  height: 1px;
+  background-color: var(--clr-text);
+  top: 50%;
+  transform: translateY(-50%);
+  right: calc(100% + 100px);
+}
 .design .grid {
   box-sizing: border-box;
   display: grid;
@@ -897,7 +943,6 @@ button {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 100vh;
 }
 @media screen and (max-width: 768px) {
   .design .hero {
@@ -1603,6 +1648,20 @@ button {
 }
 .down:hover svg {
   transform: rotate(45deg);
+}
+
+.form__title {
+  font-size: 22px;
+  width: 387px;
+  margin-bottom: 79px;
+}
+.form__row + .form__row {
+  margin-top: 64px;
+}
+.form__btn.btn {
+  margin-top: 119px;
+  max-width: 366px;
+  width: 100%;
 }
 
 .header .container {
