@@ -1004,15 +1004,25 @@ button {
 }
 @media screen and (max-width: 768px) {
   .design .footer {
-    display: none;
+    padding: 90px 0 43px;
   }
 }
 .design .footer .grid {
   grid-template-areas: "logo . contacts contacts contacts social" "line line line line line line" "copyright . politics politics politics designed";
   align-items: center;
 }
+@media screen and (max-width: 768px) {
+  .design .footer .grid {
+    grid-template-areas: ". contacts contacts" "line line line" ". politics politics" ". social social" ". designed designed";
+  }
+}
 .design .footer .grid-child-1 {
   grid-area: logo;
+}
+@media screen and (max-width: 768px) {
+  .design .footer .grid-child-1 {
+    display: none;
+  }
 }
 .design .footer .grid-child-2 {
   grid-area: contacts;
@@ -1021,11 +1031,21 @@ button {
   grid-area: social;
   justify-self: end;
 }
+@media screen and (max-width: 768px) {
+  .design .footer .grid-child-3 {
+    justify-self: start;
+  }
+}
 .design .footer .grid-child-4 {
   grid-area: line;
 }
 .design .footer .grid-child-5 {
   grid-area: copyright;
+}
+@media screen and (max-width: 768px) {
+  .design .footer .grid-child-5 {
+    display: none;
+  }
 }
 .design .footer .grid-child-6 {
   grid-area: politics;
@@ -1033,6 +1053,11 @@ button {
 .design .footer .grid-child-7 {
   grid-area: designed;
   justify-self: end;
+}
+@media screen and (max-width: 768px) {
+  .design .footer .grid-child-7 {
+    justify-self: start;
+  }
 }
 .design .footer__logo .logo__link {
   display: block;
@@ -1042,12 +1067,39 @@ button {
 .design .footer__contacts {
   font-size: 33px;
 }
+@media screen and (max-width: 768px) {
+  .design .footer__contacts {
+    font-size: 22px;
+  }
+}
+.design .footer__contacts span {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .design .footer__contacts span {
+    font-size: 13px;
+    display: block;
+  }
+}
 .design .footer__phone {
   margin-bottom: 5px;
+}
+@media screen and (max-width: 768px) {
+  .design .footer__phone {
+    margin-bottom: 30px;
+  }
 }
 .design .footer__phone a {
   color: inherit;
   text-decoration: none;
+}
+@media screen and (max-width: 768px) {
+  .design .footer__social {
+    margin-bottom: 35px;
+  }
+}
+.design .footer__social .social-dot__item + .social-dot__item {
+  margin-left: 3px;
 }
 .design .footer__line {
   margin: 100px 0;
@@ -1055,14 +1107,44 @@ button {
   width: 100%;
   background-color: var(--clr-darkgrey);
 }
+@media screen and (max-width: 768px) {
+  .design .footer__line {
+    margin: 60px 0;
+  }
+}
+.design .footer__copyright {
+  color: #D3D3D3;
+}
 .design .footer__politics {
-  color: var(--clr-white);
+  color: #D3D3D3;
+}
+@media screen and (max-width: 768px) {
+  .design .footer__politics {
+    display: inline-block;
+    font-size: 13px;
+    margin-bottom: 35px;
+  }
 }
 .design .footer__designed {
+  font-size: 16px;
   text-align: right;
 }
+@media screen and (max-width: 768px) {
+  .design .footer__designed {
+    font-size: 13px;
+    text-align: left;
+  }
+}
+.design .footer__designed span {
+  display: block;
+}
+@media screen and (max-width: 768px) {
+  .design .footer__designed span {
+    display: inline;
+  }
+}
 .design .footer__designed a {
-  color: var(--clr-white);
+  color: #D3D3D3;
 }
 
 .design .hero {
@@ -2453,6 +2535,7 @@ button {
 
 .social {
   display: flex;
+  font-size: 16px;
 }
 .social__item {
   color: var(--clr-social);
