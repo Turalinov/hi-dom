@@ -418,6 +418,13 @@ select, textarea {
   transition: 0.3s;
   border-bottom: 1px solid grey;
 }
+@media screen and (max-width: 768px) {
+  input:not([type=checkbox]):not([type=radio]),
+  select, textarea {
+    font-size: 10px;
+    padding: 0px 15px 15px 0;
+  }
+}
 input:not([type=checkbox]):not([type=radio])::placeholder,
 select::placeholder, textarea::placeholder {
   color: var(--clr-text);
@@ -729,15 +736,20 @@ button {
 
 .design .consultation {
   background-color: var(--clr-black);
-  padding: 225px 0 190px;
+  padding: 225px 0 0;
 }
 @media screen and (max-width: 768px) {
   .design .consultation {
-    display: none;
+    padding: 90px 0 0;
   }
 }
 .design .consultation .grid {
-  grid-template-areas: "title1 title1 title1 title1 title1 title1" "title2 title2 title2 title2 title2 title2" ". . form form . .";
+  grid-template-areas: "title1 title1 title1 title1 title1 title1" "title2 title2 title2 title2 title2 title2" ". . form form . ." "line line line line line line";
+}
+@media screen and (max-width: 768px) {
+  .design .consultation .grid {
+    grid-template-areas: "title1 title1 title1" "title2 title2 title2" ". form form";
+  }
 }
 .design .consultation .grid-child-1 {
   grid-area: title1;
@@ -748,8 +760,27 @@ button {
 .design .consultation .grid-child-3 {
   grid-area: form;
 }
+.design .consultation .grid-child-4 {
+  grid-area: line;
+}
+@media screen and (max-width: 768px) {
+  .design .consultation .grid-child-4 {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .design .consultation__title1 {
+    margin-left: 50px;
+  }
+}
 .design .consultation__title1 span {
   position: relative;
+}
+@media screen and (max-width: 768px) {
+  .design .consultation__title1 span {
+    display: block;
+    margin-left: -40px;
+  }
 }
 .design .consultation__title1 span::after {
   content: "?";
@@ -759,10 +790,25 @@ button {
   top: 0;
   left: calc(100% + 100px);
 }
+@media screen and (max-width: 768px) {
+  .design .consultation__title1 span::after {
+    font-size: 70px;
+    line-height: 0.9;
+    bottom: 0;
+    left: calc(100% - 25px);
+    top: initial;
+  }
+}
 .design .consultation__title2 {
   margin-left: 265px;
   margin-bottom: 107px;
   position: relative;
+}
+@media screen and (max-width: 768px) {
+  .design .consultation__title2 {
+    margin-left: 0;
+    margin-bottom: 35px;
+  }
 }
 .design .consultation__title2::after {
   content: "";
@@ -774,6 +820,16 @@ button {
   transform: translateY(-50%);
   right: calc(100% + 100px);
 }
+@media screen and (max-width: 768px) {
+  .design .consultation__title2::after {
+    display: none;
+  }
+}
+.design .consultation__line {
+  padding-top: 190px;
+  border-bottom: 1px solid var(--clr-darkgrey);
+}
+
 .design .grid {
   box-sizing: border-box;
   display: grid;
@@ -1657,16 +1713,34 @@ button {
 
 .form__title {
   font-size: 22px;
-  width: 387px;
+  max-width: 387px;
   margin-bottom: 79px;
+}
+@media screen and (max-width: 768px) {
+  .form__title {
+    font-size: 13px;
+    max-width: 232px;
+    margin-bottom: 45px;
+  }
 }
 .form__row + .form__row {
   margin-top: 64px;
+}
+@media screen and (max-width: 768px) {
+  .form__row + .form__row {
+    margin-top: 60px;
+  }
 }
 .form__btn.btn {
   margin-top: 119px;
   max-width: 366px;
   width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .form__btn.btn {
+    margin-top: 63px;
+    max-width: 213px;
+  }
 }
 
 .header .container {
