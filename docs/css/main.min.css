@@ -576,6 +576,12 @@ button {
     padding: 75px 0 0 0;
   }
 }
+@media screen and (max-width: 768px) {
+  .design .cases__img {
+    width: 206px;
+    height: 206px;
+  }
+}
 .design .cases .container {
   position: relative;
 }
@@ -1030,6 +1036,7 @@ button {
 @media screen and (max-width: 768px) {
   .design .experience__img1 {
     width: 196px;
+    height: 260px;
     margin-bottom: 53px;
   }
 }
@@ -1042,6 +1049,12 @@ button {
   .design .experience__desc {
     font-size: 13px;
     margin-bottom: 43px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .design .experience__img2 {
+    width: 296px;
+    height: 207px;
   }
 }
 .design .experience__down-big {
