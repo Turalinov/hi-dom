@@ -535,7 +535,7 @@ button {
 }
 @media screen and (max-width: 1600px) {
   .btn {
-    padding: 30px 30px 25px 30px;
+    padding: 40px 30px 35px 30px;
     min-width: 250px;
   }
 }
@@ -555,6 +555,14 @@ button {
   color: var(--clr-white);
   background-color: transparent;
   border: 1px solid var(--clr-white);
+}
+.btn:disabled {
+  opacity: 0.5;
+}
+.btn:disabled:hover {
+  background-color: var(--clr-white);
+  color: var(--clr-black);
+  border: 1px solid transparent;
 }
 
 .design .cases {
@@ -594,13 +602,28 @@ button {
 .design .cases .grid {
   grid-template-areas: "name . title1 title1 title1 title1" "title2 title2 title2 title2 title2 title2" ". . desc desc btns btns" "slider slider slider slider slider slider";
 }
+@media screen and (max-width: 1184px) {
+  .design .cases .grid {
+    grid-template-areas: "name . title1 title1 title1 title1" "title2 title2 title2 title2 title2 title2" "desc desc desc btns btns btns" "slider slider slider slider slider slider";
+  }
+}
 @media screen and (max-width: 768px) {
   .design .cases .grid {
     grid-template-areas: "title1 title1 title1" "title2 title2 title2" ". desc btns" "slider slider slider";
   }
 }
+@media screen and (max-width: 410px) {
+  .design .cases .grid {
+    grid-template-areas: "title1 title1 title1" "title2 title2 title2" "desc desc btns" "slider slider slider";
+  }
+}
 .design .cases .grid-child-1 {
   grid-area: name;
+}
+@media screen and (max-width: 1184px) {
+  .design .cases .grid-child-1 {
+    display: none;
+  }
 }
 .design .cases .grid-child-2 {
   grid-area: title1;
@@ -620,7 +643,7 @@ button {
 .design .cases .grid-child-5 {
   grid-area: btns;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1184px) {
   .design .cases .grid-child-5 {
     justify-self: end;
   }
@@ -639,6 +662,11 @@ button {
 @media screen and (max-width: 768px) {
   .design .cases__title1, .design .cases__title2 {
     font-size: 30px;
+  }
+}
+@media screen and (max-width: 410px) {
+  .design .cases__title1, .design .cases__title2 {
+    font-size: 25px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -668,16 +696,17 @@ button {
 }
 .design .cases__btns {
   display: flex;
-  margin-bottom: 112px;
-}
-@media screen and (max-width: 768px) {
-  .design .cases__btns {
-    margin-bottom: 50px;
-  }
 }
 .design .cases__btns .prev,
 .design .cases__btns .next {
   flex: 0 0 auto;
+}
+@media screen and (max-width: 410px) {
+  .design .cases__btns .prev,
+  .design .cases__btns .next {
+    width: 54px;
+    height: 54px;
+  }
 }
 .design .cases__btns .next {
   margin-left: -10px;
@@ -685,6 +714,12 @@ button {
 .design .cases__slider {
   overflow: initial;
   margin-bottom: 193px;
+  margin-top: 112px;
+}
+@media screen and (max-width: 768px) {
+  .design .cases__slider {
+    margin-top: 50px;
+  }
 }
 @media screen and (max-width: 768px) {
   .design .cases__slider {
@@ -880,6 +915,8 @@ button {
 @media screen and (max-width: 768px) {
   .design .experience .grid {
     grid-template-areas: ". . header1" "header2 header2 header2" "header3 header3 header3" ". desc desc" "img1 img1 img1" ". img2 img2";
+    max-width: 428px;
+    margin: 0 auto;
   }
 }
 .design .experience .grid-child-1 {
@@ -913,6 +950,11 @@ button {
     font-size: 30px;
   }
 }
+@media screen and (max-width: 410px) {
+  .design .experience__title {
+    font-size: 25px;
+  }
+}
 .design .experience__title::before {
   content: "";
   position: absolute;
@@ -940,8 +982,13 @@ button {
     font-size: 30px;
   }
 }
+@media screen and (max-width: 410px) {
+  .design .experience__title2 {
+    font-size: 25px;
+  }
+}
 .design .experience__title3 {
-  display: block;
+  display: inline-block;
   text-align: center;
   margin-bottom: 135px;
   position: relative;
@@ -954,19 +1001,30 @@ button {
   width: 864px;
   height: 1px;
   top: 50%;
-  left: 95%;
+  left: 102%;
   transform: translateY(-50%);
 }
 @media screen and (max-width: 768px) {
   .design .experience__title3::before {
-    left: 100%;
+    left: 102%;
+  }
+}
+@media screen and (max-width: 410px) {
+  .design .experience__title3::before {
+    display: none;
   }
 }
 @media screen and (max-width: 768px) {
   .design .experience__title3 {
+    max-width: max-content;
     text-align: inherit;
     font-size: 30px;
     margin-bottom: 33px;
+  }
+}
+@media screen and (max-width: 410px) {
+  .design .experience__title3 {
+    font-size: 25px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -1189,9 +1247,29 @@ button {
 .design .hero .grid {
   grid-template-areas: "logo . menu menu menu social" "line line line line line line" "copyright . . . slogan slogan" "header header header header header header" "header2 header2 header2 header2 header2 header2" "header3 header3 header3 header3 buttons buttons";
 }
+@media screen and (max-width: 1707px) {
+  .design .hero .grid {
+    grid-template-areas: "logo menu menu menu menu social" "line line line line line line" "copyright . . . slogan slogan" "header header header header header header" "header2 header2 header2 header2 header2 header2" "header3 header3 header3 header3 buttons buttons";
+  }
+}
+@media screen and (max-width: 1265px) {
+  .design .hero .grid {
+    grid-template-areas: "logo . menu menu menu menu" "line line line line line line" "copyright . . . slogan slogan" "header header header header header header" "header2 header2 header2 header2 header2 header2" "header3 header3 header3 header3 buttons buttons";
+  }
+}
+@media screen and (max-width: 1184px) {
+  .design .hero .grid {
+    grid-template-areas: "logo . menu menu menu menu" "line line line line line line" "copyright . . . slogan slogan" "header header header header header header" "header2 header2 header2 header2 header2 header2" "header3 header3 header3 header3 header3 header3" "buttons buttons buttons buttons buttons buttons";
+  }
+}
 @media screen and (max-width: 768px) {
   .design .hero .grid {
     grid-template-areas: "logo logo menu" "line line line" "header header header" ". header2 header2" ". header3 header3" ". slogan slogan" ". buttons buttons";
+  }
+}
+@media screen and (max-width: 410px) {
+  .design .hero .grid {
+    grid-template-areas: "logo logo menu" "line line line" "header header header" ". header2 header2" ". header3 header3" ". slogan slogan" "buttons buttons buttons";
   }
 }
 .design .hero .grid-child-1 {
@@ -1201,6 +1279,11 @@ button {
 .design .hero .grid-child-2 {
   grid-area: menu;
   align-self: center;
+}
+@media screen and (max-width: 1265px) {
+  .design .hero .grid-child-2 {
+    justify-self: end;
+  }
 }
 @media screen and (max-width: 768px) {
   .design .hero .grid-child-2 {
@@ -1239,6 +1322,11 @@ button {
     font-size: 46px;
   }
 }
+@media screen and (max-width: 410px) {
+  .design .hero .grid-child-7 h1 {
+    font-size: 35px;
+  }
+}
 .design .hero .grid-child-8 {
   grid-area: header2;
 }
@@ -1251,10 +1339,20 @@ button {
     font-size: 6.8vw;
   }
 }
+@media screen and (max-width: 1184px) {
+  .design .hero .grid-child-8 h2 {
+    margin-left: 142px;
+  }
+}
 @media screen and (max-width: 768px) {
   .design .hero .grid-child-8 h2 {
     font-size: 46px;
     margin-left: initial;
+  }
+}
+@media screen and (max-width: 410px) {
+  .design .hero .grid-child-8 h2 {
+    font-size: 35px;
   }
 }
 .design .hero .grid-child-9 {
@@ -1269,10 +1367,20 @@ button {
     font-size: 6.8vw;
   }
 }
+@media screen and (max-width: 1184px) {
+  .design .hero .grid-child-9 h2 {
+    margin-left: 45px;
+  }
+}
 @media screen and (max-width: 768px) {
   .design .hero .grid-child-9 h2 {
     font-size: 46px;
     margin-left: initial;
+  }
+}
+@media screen and (max-width: 410px) {
+  .design .hero .grid-child-9 h2 {
+    font-size: 35px;
   }
 }
 .design .hero .grid-child-10 {
@@ -1312,8 +1420,19 @@ button {
   font-size: 22px;
   line-height: 1.6;
 }
+@media screen and (max-width: 1184px) {
+  .design .hero__slogan {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 811px) {
+  .design .hero__slogan {
+    margin-left: -50px;
+  }
+}
 @media screen and (max-width: 768px) {
   .design .hero__slogan {
+    margin-left: 0;
     font-size: 13px;
     margin: 31px 0 42px 0;
   }
@@ -1327,6 +1446,16 @@ button {
 .design .hero__btns {
   display: flex;
   justify-content: flex-end;
+}
+@media screen and (max-width: 1184px) {
+  .design .hero__btns {
+    margin-top: 30px;
+  }
+}
+@media screen and (max-width: 410px) {
+  .design .hero__btns {
+    align-items: center;
+  }
 }
 .design .hero__btns .down {
   flex-grow: 0;
@@ -1516,6 +1645,11 @@ button {
     margin-left: -40px;
   }
 }
+@media screen and (max-width: 1184px) {
+  .design .procedure__title1 {
+    font-size: 25px;
+  }
+}
 .design .procedure__title2 {
   margin-left: -164px;
   margin-bottom: 150px;
@@ -1524,6 +1658,11 @@ button {
   .design .procedure__title2 {
     margin-left: 0;
     margin-bottom: 70px;
+  }
+}
+@media screen and (max-width: 1184px) {
+  .design .procedure__title2 {
+    font-size: 25px;
   }
 }
 .design .procedure__line1, .design .procedure__line2, .design .procedure__line3, .design .procedure__line4, .design .procedure__line5 {
@@ -1647,9 +1786,19 @@ button {
     font-size: 30px;
   }
 }
+@media screen and (max-width: 410px) {
+  .design .services__title1, .design .services__title2, .design .services__title3 {
+    font-size: 25px;
+  }
+}
 @media screen and (max-width: 768px) {
   .design .services__title1 {
     margin-left: 84px;
+  }
+}
+@media screen and (max-width: 423px) {
+  .design .services__title1 {
+    margin-left: 31px;
   }
 }
 .design .services__title2 {
@@ -1658,6 +1807,11 @@ button {
 @media screen and (max-width: 768px) {
   .design .services__title2 {
     margin-left: 0;
+  }
+}
+@media screen and (max-width: 423px) {
+  .design .services__title2 {
+    margin-left: -30px;
   }
 }
 .design .services__title3 {
@@ -1706,6 +1860,12 @@ button {
     margin-bottom: 35px;
     font-size: 13px;
     margin-right: 10px;
+  }
+}
+@media screen and (max-width: 410px) {
+  .design .services__item1, .design .services__item2, .design .services__item3, .design .services__item4 {
+    font-size: 12px;
+    margin-left: -15px;
   }
 }
 .design .services__desc1, .design .services__desc2, .design .services__desc3, .design .services__desc4 {
@@ -1836,10 +1996,22 @@ button {
   border-radius: 50%;
   transition: all 0.3s;
 }
+@media screen and (max-width: 1184px) {
+  .down {
+    width: 90px;
+    height: 90px;
+  }
+}
 @media screen and (max-width: 768px) {
   .down {
     width: 82px;
     height: 82px;
+  }
+}
+@media screen and (max-width: 410px) {
+  .down {
+    width: 50px;
+    height: 50px;
   }
 }
 .down svg {
@@ -1891,6 +2063,9 @@ button {
     margin-top: 63px;
     max-width: 213px;
   }
+}
+.form__message {
+  margin-top: 50px;
 }
 
 .header .container {
@@ -2365,6 +2540,21 @@ button {
     }
   }
 }
+@media screen and (max-width: 1470px) {
+  .menu {
+    margin-left: -100px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .menu {
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 1265px) {
+  .menu__social.social {
+    display: none;
+  }
+}
 .menu__toggle {
   display: none;
   background-color: var(--clr-white);
@@ -2421,8 +2611,18 @@ button {
   text-decoration: none;
   color: var(--clr-text);
 }
+@media screen and (max-width: 825px) {
+  .menu__link {
+    font-size: 13px;
+  }
+}
 .menu__item + .menu__item {
   margin-left: 40px;
+}
+@media screen and (max-width: 1871px) {
+  .menu__item + .menu__item {
+    margin-left: 25px;
+  }
 }
 .menu.open .menu__toggle span {
   top: 27px;
