@@ -871,7 +871,8 @@ button {
   border-bottom: 1px solid var(--clr-darkgrey);
 }
 
-.design .grid {
+.design .grid,
+.engineering .grid {
   box-sizing: border-box;
   display: grid;
   grid-template-columns: 31.05% 8.6% 4.13% 28.2% 4.24% 23.66%;
@@ -882,7 +883,8 @@ button {
   z-index: 2;
 }
 @media screen and (max-width: 768px) {
-  .design .grid {
+  .design .grid,
+  .engineering .grid {
     grid-template-columns: 14.94% 32.18% 52.87%;
   }
 }
@@ -1413,6 +1415,11 @@ button {
     width: 93px;
   }
 }
+@media screen and (max-width: 1265px) {
+  .design .hero .menu__social.social {
+    display: none;
+  }
+}
 .design .hero__line {
   height: 1px;
   background-color: var(--clr-white);
@@ -1426,6 +1433,7 @@ button {
   }
 }
 .design .hero__copyright {
+  color: #D3D3D3;
   text-transform: uppercase;
   font-size: 16px;
 }
@@ -1476,8 +1484,14 @@ button {
   flex-basis: auto;
 }
 .design .hero__btns .btn {
+  display: inline-block;
   flex-basis: 366px;
   margin-left: 10px;
+}
+@media screen and (max-width: 768px) {
+  .design .hero__btns .btn {
+    max-width: 213px;
+  }
 }
 @media screen and (max-width: 768px) {
   .design .hero__designed {
@@ -1558,6 +1572,12 @@ button {
 }
 .design .hero .second-grid-child7 {
   grid-area: designed;
+}
+@media screen and (max-width: 768px) {
+  .design .hero .social-dot__link {
+    width: 62px;
+    height: 62px;
+  }
 }
 
 .design .procedure {
@@ -2044,6 +2064,390 @@ button {
 }
 .down:hover svg {
   transform: rotate(45deg);
+}
+
+.engineering h1,
+.engineering h2,
+.engineering h3,
+.engineering h4,
+.engineering h5,
+.engineering h6 {
+  font-family: "Stolzl", sans-serif;
+  font-weight: 300;
+}
+
+.engineering .hero {
+  padding: 74px 0 100px 0;
+  background-image: url("../img/engineering-hero.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+@media screen and (max-width: 768px) {
+  .engineering .hero {
+    background-position: center left 16%;
+    padding: 35px 0 315px 0;
+  }
+}
+.engineering .hero .container {
+  position: relative;
+}
+.engineering .hero .container::after {
+  content: "";
+  position: absolute;
+  left: -1215px;
+  top: 638px;
+  width: 2074.79px;
+  height: 847.46px;
+  background-image: url("../img/decor-hero-design.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 1;
+  pointer-events: none;
+  transform: rotate(-45.11deg);
+}
+@media screen and (max-width: 768px) {
+  .engineering .hero .container::after {
+    left: -640px;
+    top: 780px;
+    width: 1035px;
+    height: 422px;
+  }
+}
+.engineering .hero .grid {
+  grid-template-areas: "logo . menu menu menu social" "line line line line line line" "copyright . . . slogan slogan" "header header header header header header" "header2 header2 header2 header2 header2 header2" "header3 header3 header3 header3 buttons buttons";
+}
+@media screen and (max-width: 1707px) {
+  .engineering .hero .grid {
+    grid-template-areas: "logo menu menu menu menu social" "line line line line line line" "copyright . . . slogan slogan" "header header header header header header" "header2 header2 header2 header2 header2 header2" "header3 header3 header3 header3 buttons buttons";
+  }
+}
+@media screen and (max-width: 1265px) {
+  .engineering .hero .grid {
+    grid-template-areas: "logo . menu menu menu menu" "line line line line line line" "copyright . . . slogan slogan" "header header header header header header" "header2 header2 header2 header2 header2 header2" "header3 header3 header3 header3 buttons buttons";
+  }
+}
+@media screen and (max-width: 1470px) {
+  .engineering .hero .grid {
+    grid-template-areas: "logo . menu menu menu menu" "line line line line line line" "copyright . . . slogan slogan" "header header header header header header" "header2 header2 header2 header2 header2 header2" "header3 header3 header3 header3 header3 header3" "buttons buttons buttons buttons buttons buttons";
+  }
+}
+@media screen and (max-width: 768px) {
+  .engineering .hero .grid {
+    grid-template-areas: "logo logo menu" "line line line" "header header header" "header2 header2 header2" "header3 header3 header3" ". slogan slogan" ". buttons buttons";
+  }
+}
+@media screen and (max-width: 410px) {
+  .engineering .hero .grid {
+    grid-template-areas: "logo logo menu" "line line line" "header header header" ". header2 header2" ". header3 header3" ". slogan slogan" "buttons buttons buttons";
+  }
+}
+.engineering .hero .grid-child-1 {
+  grid-area: logo;
+  align-self: center;
+}
+.engineering .hero .grid-child-2 {
+  grid-area: menu;
+  align-self: center;
+}
+@media screen and (max-width: 1470px) {
+  .engineering .hero .grid-child-2 {
+    justify-self: end;
+  }
+}
+@media screen and (max-width: 768px) {
+  .engineering .hero .grid-child-2 {
+    justify-self: end;
+  }
+}
+.engineering .hero .grid-child-3 {
+  grid-area: social;
+  align-self: center;
+  justify-self: end;
+}
+@media screen and (max-width: 768px) {
+  .engineering .hero .grid-child-3 {
+    display: none;
+  }
+}
+.engineering .hero .grid-child-4 {
+  grid-area: line;
+}
+.engineering .hero .grid-child-5 {
+  grid-area: copyright;
+}
+@media screen and (max-width: 768px) {
+  .engineering .hero .grid-child-5 {
+    display: none;
+  }
+}
+.engineering .hero .grid-child-6 {
+  grid-area: slogan;
+}
+.engineering .hero .grid-child-7 {
+  grid-area: header;
+  margin-top: -100px;
+}
+@media screen and (max-width: 1470px) {
+  .engineering .hero .grid-child-7 {
+    margin-top: 20px;
+  }
+}
+.engineering .hero .grid-child-7 h1 {
+  margin-left: 260px;
+}
+@media screen and (max-width: 1184px) {
+  .engineering .hero .grid-child-7 h1 {
+    margin-left: 160px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .engineering .hero .grid-child-7 h1 {
+    margin-left: 0;
+    font-size: 42px;
+  }
+}
+@media screen and (max-width: 410px) {
+  .engineering .hero .grid-child-7 h1 {
+    font-size: 35px;
+  }
+}
+.engineering .hero .grid-child-8 {
+  grid-area: header2;
+}
+.engineering .hero .grid-child-8 h2 {
+  font-size: 140px;
+}
+@media screen and (max-width: 1920px) {
+  .engineering .hero .grid-child-8 h2 {
+    font-size: 6.8vw;
+  }
+}
+@media screen and (max-width: 1184px) {
+  .engineering .hero .grid-child-8 h2 {
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .engineering .hero .grid-child-8 h2 {
+    font-size: 42px;
+    margin-left: 20px;
+  }
+}
+@media screen and (max-width: 410px) {
+  .engineering .hero .grid-child-8 h2 {
+    font-size: 35px;
+  }
+}
+.engineering .hero .grid-child-9 {
+  grid-area: header3;
+}
+.engineering .hero .grid-child-9 h2 {
+  font-size: 140px;
+  margin-left: 152px;
+}
+@media screen and (max-width: 1920px) {
+  .engineering .hero .grid-child-9 h2 {
+    font-size: 6.8vw;
+  }
+}
+@media screen and (max-width: 1184px) {
+  .engineering .hero .grid-child-9 h2 {
+    margin-left: 130px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .engineering .hero .grid-child-9 h2 {
+    font-size: 42px;
+    margin-left: 50px;
+  }
+}
+@media screen and (max-width: 410px) {
+  .engineering .hero .grid-child-9 h2 {
+    font-size: 35px;
+  }
+}
+.engineering .hero .grid-child-10 {
+  grid-area: buttons;
+  align-self: end;
+}
+.engineering .hero__logo {
+  position: relative;
+  z-index: 50;
+}
+.engineering .hero__logo .logo__link {
+  display: block;
+  width: 146px;
+}
+@media screen and (max-width: 768px) {
+  .engineering .hero__logo .logo__link {
+    width: 93px;
+  }
+}
+@media screen and (max-width: 1470px) {
+  .engineering .hero .menu__social.social {
+    display: none;
+  }
+}
+.engineering .hero__line {
+  height: 1px;
+  background-color: var(--clr-white);
+  margin: 60px 0 150px 0;
+  position: relative;
+  z-index: 50;
+}
+@media screen and (max-width: 768px) {
+  .engineering .hero__line {
+    margin: 22px 0 118px 0;
+  }
+}
+.engineering .hero__copyright {
+  color: #D3D3D3;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+.engineering .hero__slogan {
+  font-size: 22px;
+  line-height: 1.6;
+}
+@media screen and (max-width: 1184px) {
+  .engineering .hero__slogan {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 811px) {
+  .engineering .hero__slogan {
+    margin-left: -50px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .engineering .hero__slogan {
+    margin-left: 0;
+    font-size: 13px;
+    margin: 31px 0 42px 0;
+  }
+}
+.engineering .hero__title span:nth-child(2) {
+  margin-left: 262px;
+}
+.engineering .hero__title span:nth-child(3) {
+  margin-left: 135px;
+}
+.engineering .hero__btns {
+  display: flex;
+  justify-content: flex-end;
+}
+@media screen and (max-width: 1470px) {
+  .engineering .hero__btns {
+    margin-top: 30px;
+  }
+}
+@media screen and (max-width: 410px) {
+  .engineering .hero__btns {
+    align-items: center;
+  }
+}
+.engineering .hero__btns .down {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: auto;
+}
+.engineering .hero__btns .btn {
+  display: inline-block;
+  flex-basis: 366px;
+  margin-left: 10px;
+}
+@media screen and (max-width: 768px) {
+  .engineering .hero__btns .btn {
+    max-width: 213px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .engineering .hero__designed {
+    font-size: 13px;
+    display: block;
+    color: var(--clr-grey);
+  }
+  .engineering .hero__designed a {
+    text-decoration: underline;
+    color: var(--clr-white);
+  }
+}
+.engineering .hero__social-dot.social-dot {
+  margin: 80px 0 210px 0;
+}
+.engineering .hero .second-grid {
+  display: none;
+  box-sizing: border-box;
+  grid-template-columns: 31.05% 8.6% 4.13% 28.2% 4.24% 23.66%;
+  grid-template-rows: auto;
+  align-items: start;
+  position: relative;
+  z-index: 30;
+}
+@media screen and (max-width: 768px) {
+  .engineering .hero .second-grid {
+    display: grid;
+    grid-template-columns: 14.94% 32.18% 52.87%;
+    grid-template-areas: "link1 link1 link1" ". link2 link2" ". link3 link3" ". link4 link4" ". link5 link5" ". social social" ". designed designed";
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: -150%;
+    height: 100%;
+    overflow: auto;
+    padding: 185px 40px 40px 40px;
+    transition: 1s;
+    background-image: url("../img/design-hero-dropdown.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+.engineering .hero .second-grid.open {
+  top: 0;
+}
+.engineering .hero .second-grid-child {
+  position: relative;
+  z-index: 10;
+}
+.engineering .hero .second-grid-child > a {
+  text-decoration: none;
+  text-transform: uppercase;
+  display: block;
+  font-family: "Stolzl", sans-serif;
+  font-weight: 300;
+  color: var(--clr-text);
+  font-size: 29px;
+  margin-top: 15px;
+}
+.engineering .hero .second-grid-child1 {
+  grid-area: link1;
+}
+.engineering .hero .second-grid-child2 {
+  grid-area: link2;
+}
+.engineering .hero .second-grid-child3 {
+  grid-area: link3;
+}
+.engineering .hero .second-grid-child4 {
+  grid-area: link4;
+}
+.engineering .hero .second-grid-child5 {
+  grid-area: link5;
+}
+.engineering .hero .second-grid-child6 {
+  grid-area: social;
+}
+.engineering .hero .second-grid-child7 {
+  grid-area: designed;
+}
+@media screen and (max-width: 768px) {
+  .engineering .hero .social-dot__link {
+    width: 62px;
+    height: 62px;
+  }
 }
 
 .form__title {
@@ -2561,11 +2965,6 @@ button {
 @media screen and (max-width: 768px) {
   .menu {
     margin-left: 0;
-  }
-}
-@media screen and (max-width: 1265px) {
-  .menu__social.social {
-    display: none;
   }
 }
 .menu__toggle {
