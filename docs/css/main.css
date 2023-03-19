@@ -2071,6 +2071,209 @@ button {
   transform: rotate(45deg);
 }
 
+.engineering .cases {
+  background-color: #E4E4E4;
+  color: var(--clr-black);
+  padding: 295px 0 0 0;
+  position: relative;
+  /*slider*/
+  /*slider*/
+}
+@media screen and (max-width: 768px) {
+  .engineering .cases {
+    padding: 75px 0 0 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .engineering .cases__img {
+    width: 206px;
+    height: 206px;
+  }
+}
+.engineering .cases .container {
+  position: relative;
+}
+.engineering .cases .container::after {
+  content: "";
+  position: absolute;
+  right: -719px;
+  top: 325px;
+  width: 2074.79px;
+  height: 847.46px;
+  background-image: url("../img/decor-hero-engineering.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 1;
+  pointer-events: none;
+  transform: rotate(325deg);
+}
+@media screen and (max-width: 768px) {
+  .engineering .cases .container::after {
+    display: none;
+  }
+}
+.engineering .cases .grid {
+  grid-template-areas: "name . title1 title1 title1 title1" "title2 title2 title2 title2 title2 title2" ". . desc desc btns btns" "slider slider slider slider slider slider";
+}
+@media screen and (max-width: 1184px) {
+  .engineering .cases .grid {
+    grid-template-areas: "name . title1 title1 title1 title1" "title2 title2 title2 title2 title2 title2" "desc desc desc btns btns btns" "slider slider slider slider slider slider";
+  }
+}
+@media screen and (max-width: 768px) {
+  .engineering .cases .grid {
+    grid-template-areas: "title1 title1 title1" "title2 title2 title2" ". desc btns" "slider slider slider";
+  }
+}
+@media screen and (max-width: 410px) {
+  .engineering .cases .grid {
+    grid-template-areas: "title1 title1 title1" "title2 title2 title2" "desc desc btns" "slider slider slider";
+  }
+}
+.engineering .cases .grid-child-1 {
+  grid-area: name;
+}
+@media screen and (max-width: 1184px) {
+  .engineering .cases .grid-child-1 {
+    display: none;
+  }
+}
+.engineering .cases .grid-child-2 {
+  grid-area: title1;
+}
+.engineering .cases .grid-child-3 {
+  grid-area: title2;
+}
+.engineering .cases .grid-child-4 {
+  grid-area: desc;
+  align-self: center;
+}
+@media screen and (max-width: 768px) {
+  .engineering .cases .grid-child-4 {
+    align-self: start;
+  }
+}
+.engineering .cases .grid-child-5 {
+  grid-area: btns;
+}
+@media screen and (max-width: 1184px) {
+  .engineering .cases .grid-child-5 {
+    justify-self: end;
+  }
+}
+.engineering .cases .grid-child-6 {
+  grid-area: slider;
+}
+.engineering .cases__name {
+  color: var(--clr-grey);
+}
+@media screen and (max-width: 768px) {
+  .engineering .cases__name {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .engineering .cases__title1, .engineering .cases__title2 {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 410px) {
+  .engineering .cases__title1, .engineering .cases__title2 {
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .engineering .cases__title1 {
+    margin-left: 10px;
+  }
+}
+.engineering .cases__title2 {
+  margin-left: 50px;
+  margin-bottom: 90px;
+}
+@media screen and (max-width: 768px) {
+  .engineering .cases__title2 {
+    margin-left: 26px;
+    margin-bottom: 40px;
+  }
+}
+.engineering .cases__desc {
+  font-size: 22px;
+  max-width: 316px;
+}
+@media screen and (max-width: 768px) {
+  .engineering .cases__desc {
+    font-size: 13px;
+    min-width: 147px;
+  }
+}
+.engineering .cases__btns {
+  display: flex;
+}
+.engineering .cases__btns .prev,
+.engineering .cases__btns .next {
+  flex: 0 0 auto;
+}
+@media screen and (max-width: 410px) {
+  .engineering .cases__btns .prev,
+  .engineering .cases__btns .next {
+    width: 54px;
+    height: 54px;
+  }
+}
+.engineering .cases__btns .next {
+  margin-left: -10px;
+}
+.engineering .cases__slider {
+  overflow: initial;
+  margin-bottom: 193px;
+  margin-top: 112px;
+}
+@media screen and (max-width: 768px) {
+  .engineering .cases__slider {
+    margin-top: 50px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .engineering .cases__slider {
+    margin-bottom: 102px;
+  }
+}
+.engineering .cases__slider .cases__item {
+  width: 534px;
+  height: 534px;
+}
+@media screen and (max-width: 768px) {
+  .engineering .cases__slider .cases__item {
+    width: 206px;
+    height: 206px;
+  }
+}
+.engineering .cases__marquee {
+  position: relative;
+  z-index: 2;
+}
+.engineering .cases__bg {
+  padding-top: 1140px;
+  background-image: url("../img/cases-engineering-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: -130px;
+  position: relative;
+  z-index: 1;
+}
+@media screen and (max-width: 768px) {
+  .engineering .cases__bg {
+    padding-top: 473px;
+    margin-top: -45px;
+  }
+}
+.engineering .cases__dot {
+  display: none;
+}
+
 .engineering h1,
 .engineering h2,
 .engineering h3,
@@ -2104,7 +2307,7 @@ button {
   top: 638px;
   width: 2074.79px;
   height: 847.46px;
-  background-image: url("../img/decor-hero-design.svg");
+  background-image: url("../img/decor-hero-engineering.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -3182,6 +3385,15 @@ button {
     background-image: url("../img/marquee-white-mobile.svg");
   }
 }
+.marquee.black {
+  background-image: url("../img/marquee-black.svg");
+}
+@media screen and (max-width: 768px) {
+  .marquee.black {
+    height: 45px;
+    background-image: url("../img/marquee-black-mobile.svg");
+  }
+}
 
 @keyframes anim1 {
   from {
@@ -3302,6 +3514,15 @@ button {
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 50%;
   transition: all 0.3s;
+}
+.next.dark, .prev.dark {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+.next.dark svg, .prev.dark svg {
+  stroke: black;
+}
+.next.dark:hover svg, .prev.dark:hover svg {
+  stroke: white;
 }
 @media screen and (max-width: 768px) {
   .next, .prev {
