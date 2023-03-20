@@ -1271,6 +1271,7 @@ button {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  min-height: 100vh;
 }
 @media screen and (max-width: 768px) {
   .design .hero {
@@ -2438,6 +2439,7 @@ button {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  min-height: 100vh;
 }
 @media screen and (max-width: 768px) {
   .engineering .hero {
