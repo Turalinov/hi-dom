@@ -1588,8 +1588,22 @@ button {
 }
 @media screen and (max-width: 768px) {
   .design .procedure {
-    padding: 80px 0;
+    padding: 80px 0 0;
     font-size: 10px;
+  }
+}
+.design .procedure__bg {
+  display: none;
+}
+.design .procedure__bg img {
+  width: 100%;
+  object-fit: cover;
+}
+@media screen and (max-width: 768px) {
+  .design .procedure__bg {
+    height: 340px;
+    margin-top: 80px;
+    display: block;
   }
 }
 .design .procedure .grid {
@@ -2663,6 +2677,161 @@ button {
     width: 62px;
     height: 62px;
   }
+}
+
+.engineering .procedure {
+  padding: 260px 0 0 0;
+  background-color: var(--clr-white-bg);
+  color: var(--clr-black);
+  font-size: 22px;
+}
+@media screen and (max-width: 768px) {
+  .engineering .procedure {
+    padding: 80px 0 0;
+    font-size: 10px;
+  }
+}
+.engineering .procedure__bg {
+  display: none;
+}
+.engineering .procedure__bg img {
+  width: 100%;
+  object-fit: cover;
+}
+@media screen and (max-width: 768px) {
+  .engineering .procedure__bg {
+    height: 467px;
+    margin-top: 80px;
+    display: block;
+  }
+}
+.engineering .procedure .grid {
+  grid-template-areas: ". . title1 title1 title1 title1" ". title2 title2 title2 title2 title2" "img . counter1 item1 counter2 item2" "img . line1 line1 line1 line1" "img . counter3 item3 counter4 item4" "img . line2 line2 line2 line2" "img . counter5 item5 counter6 item6" "img . . . . .";
+}
+@media screen and (max-width: 768px) {
+  .engineering .procedure .grid {
+    grid-template-areas: ". . title1" ". title2 title2" ". counter1 item1" ". line1 line1" ". counter2 item2" ". line2 line2" ". counter3 item3" ". line3 line3" ". counter4 item4" ". line4 line4" ". counter5 item5" ". line5 line5" ". counter6 item6";
+  }
+}
+.engineering .procedure .grid-child-12,
+.engineering .procedure .grid-child-15,
+.engineering .procedure .grid-child-18 {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .engineering .procedure .grid-child-12,
+  .engineering .procedure .grid-child-15,
+  .engineering .procedure .grid-child-18 {
+    display: block;
+  }
+}
+.engineering .procedure .grid-child-1 {
+  grid-area: title1;
+}
+.engineering .procedure .grid-child-2 {
+  grid-area: title2;
+}
+.engineering .procedure .grid-child-3 {
+  grid-area: img;
+  align-self: end;
+}
+.engineering .procedure .grid-child-4 {
+  grid-area: counter1;
+}
+.engineering .procedure .grid-child-5 {
+  grid-area: item1;
+}
+.engineering .procedure .grid-child-6 {
+  grid-area: line1;
+}
+.engineering .procedure .grid-child-7 {
+  grid-area: counter2;
+}
+.engineering .procedure .grid-child-8 {
+  grid-area: item2;
+}
+.engineering .procedure .grid-child-9 {
+  grid-area: line2;
+}
+.engineering .procedure .grid-child-10 {
+  grid-area: counter3;
+}
+.engineering .procedure .grid-child-11 {
+  grid-area: item3;
+}
+.engineering .procedure .grid-child-12 {
+  grid-area: line3;
+}
+.engineering .procedure .grid-child-13 {
+  grid-area: counter4;
+}
+.engineering .procedure .grid-child-14 {
+  grid-area: item4;
+}
+.engineering .procedure .grid-child-15 {
+  grid-area: line4;
+}
+.engineering .procedure .grid-child-16 {
+  grid-area: counter5;
+}
+.engineering .procedure .grid-child-17 {
+  grid-area: item5;
+}
+.engineering .procedure .grid-child-18 {
+  grid-area: line5;
+}
+.engineering .procedure .grid-child-19 {
+  grid-area: counter6;
+}
+.engineering .procedure .grid-child-20 {
+  grid-area: item6;
+}
+@media screen and (max-width: 768px) {
+  .engineering .procedure__title1 {
+    margin-left: -40px;
+  }
+}
+@media screen and (max-width: 1184px) {
+  .engineering .procedure__title1 {
+    font-size: 25px;
+  }
+}
+.engineering .procedure__title2 {
+  margin-left: -164px;
+  margin-bottom: 150px;
+}
+@media screen and (max-width: 768px) {
+  .engineering .procedure__title2 {
+    margin-left: 0;
+    margin-bottom: 70px;
+  }
+}
+@media screen and (max-width: 1184px) {
+  .engineering .procedure__title2 {
+    font-size: 25px;
+  }
+}
+.engineering .procedure__line1, .engineering .procedure__line2, .engineering .procedure__line3, .engineering .procedure__line4, .engineering .procedure__line5 {
+  margin: 100px 0;
+  border-bottom: 1px solid #CECECE;
+}
+@media screen and (max-width: 768px) {
+  .engineering .procedure__line1, .engineering .procedure__line2, .engineering .procedure__line3, .engineering .procedure__line4, .engineering .procedure__line5 {
+    margin: 20px 0;
+  }
+}
+.engineering .procedure__img {
+  margin-top: -65px;
+  height: 985px;
+}
+@media screen and (max-width: 768px) {
+  .engineering .procedure__img {
+    display: none;
+  }
+}
+.engineering .procedure__img-elem {
+  width: 100%;
+  object-fit: cover;
 }
 
 .engineering .services {
