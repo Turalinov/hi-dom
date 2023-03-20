@@ -2198,6 +2198,11 @@ button {
     margin-bottom: 40px;
   }
 }
+@media screen and (max-width: 423px) {
+  .engineering .cases__title2 {
+    margin-left: 15px;
+  }
+}
 .engineering .cases__desc {
   font-size: 22px;
   max-width: 316px;
@@ -2446,6 +2451,7 @@ button {
 @media screen and (max-width: 410px) {
   .engineering .hero .grid-child-8 h2 {
     font-size: 35px;
+    margin-left: -70px;
   }
 }
 .engineering .hero .grid-child-9 {
@@ -2474,6 +2480,7 @@ button {
 @media screen and (max-width: 410px) {
   .engineering .hero .grid-child-9 h2 {
     font-size: 35px;
+    margin-left: 0;
   }
 }
 .engineering .hero .grid-child-10 {
@@ -2754,7 +2761,7 @@ button {
   }
 }
 .engineering .services__title1, .engineering .services__title2, .engineering .services__title3 {
-  line-height: 82.5%;
+  line-height: initial;
 }
 @media screen and (max-width: 768px) {
   .engineering .services__title1, .engineering .services__title2, .engineering .services__title3 {
@@ -2773,7 +2780,7 @@ button {
 }
 @media screen and (max-width: 423px) {
   .engineering .services__title1 {
-    margin-left: 31px;
+    margin-left: 21px;
   }
 }
 .engineering .services__title2 {
@@ -2782,11 +2789,6 @@ button {
 @media screen and (max-width: 768px) {
   .engineering .services__title2 {
     margin-left: 0;
-  }
-}
-@media screen and (max-width: 423px) {
-  .engineering .services__title2 {
-    margin-left: -30px;
   }
 }
 .engineering .services__title3 {
