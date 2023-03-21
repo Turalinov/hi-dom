@@ -3879,6 +3879,274 @@ button {
   background-color: var(--clr-orange);
 }
 
+.politics {
+  padding: 61px 0 91px 0;
+  background-image: url("../img/main.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.politics__content {
+  padding-bottom: 50px;
+}
+@media screen and (max-width: 768px) {
+  .politics__content {
+    font-size: 12px;
+  }
+}
+.politics__content ul {
+  margin: 30px 0;
+}
+.politics__content ul li {
+  margin: 20px 0;
+}
+.politics__content ul li ul {
+  padding-left: 20px;
+}
+.politics__link {
+  font-size: 15px;
+  display: inline-block;
+  color: var(--clr-white);
+  margin: 40px 0;
+}
+@media screen and (max-width: 768px) {
+  .politics {
+    padding: 35px 0 57px 0;
+  }
+}
+.politics .grid {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 23% 77%;
+  grid-template-rows: auto;
+  grid-template-areas: "logo1 social" "politics politics" "logo2 address" "rights copyright";
+  align-items: start;
+  position: relative;
+  z-index: 2;
+}
+@media screen and (max-width: 1600px) {
+  .politics .grid {
+    grid-template-columns: 29% 71%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .politics .grid {
+    grid-template-columns: 30% 70%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .politics .grid {
+    grid-template-columns: 14.94% 32.18% 52.88%;
+    grid-template-areas: "logo1 logo1 social" "politics politics politics" "copyright copyright copyright ";
+  }
+}
+.politics .btn {
+  font-family: "Gilroy", sans-serif;
+  font-weight: 600;
+}
+.politics .grid-child {
+  font-family: "Stolzl", sans-serif;
+  font-weight: 400;
+}
+.politics .grid-child p {
+  margin-bottom: 20px;
+}
+.politics .grid-child h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 768px) {
+  .politics .grid-child h1 {
+    font-size: 20px;
+  }
+}
+.politics .grid-child h2 {
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 768px) {
+  .politics .grid-child h2 {
+    font-size: 18px;
+  }
+}
+.politics .grid-child-1 {
+  grid-area: logo1;
+  align-self: stretch;
+}
+@media screen and (max-width: 768px) {
+  .politics .grid-child-1 {
+    padding-bottom: 27px;
+    border-bottom: 1px solid var(--clr-text);
+  }
+}
+@media screen and (max-width: 1200px) {
+  .politics .grid-child-1 .logo__link > img {
+    width: 215px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .politics .grid-child-1 .logo__link > img {
+    width: 170px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .politics .grid-child-1 .logo__link > img {
+    width: 93px;
+  }
+}
+.politics .grid-child-2 {
+  grid-area: social;
+  align-self: center;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+@media screen and (max-width: 992px) {
+  .politics .grid-child-2 {
+    justify-content: flex-end;
+  }
+}
+@media screen and (max-width: 768px) {
+  .politics .grid-child-2 {
+    padding-bottom: 27px;
+    border-bottom: 1px solid var(--clr-text);
+  }
+}
+.politics .grid-child-2 .politics__slogan {
+  font-size: 16px;
+}
+@media screen and (max-width: 1200px) {
+  .politics .grid-child-2 .politics__slogan {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .politics .grid-child-2 .politics__slogan {
+    display: none;
+  }
+}
+.politics .grid-child-3 {
+  grid-area: politics;
+}
+.politics .grid-child-4 {
+  grid-area: logo2;
+  align-self: stretch;
+  padding-bottom: 100px;
+  border-bottom: 1px solid var(--clr-grey);
+}
+@media screen and (max-width: 768px) {
+  .politics .grid-child-4 {
+    display: none;
+  }
+}
+.politics .grid-child-4 .logo__link > img {
+  width: 288px;
+}
+@media screen and (max-width: 1600px) {
+  .politics .grid-child-4 .logo__link > img {
+    width: initial;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .politics .grid-child-4 .logo__link > img {
+    width: 215px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .politics .grid-child-4 .logo__link > img {
+    width: 170px;
+  }
+}
+.politics .grid-child-5 {
+  grid-area: address;
+  align-self: stretch;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 100px;
+  border-bottom: 1px solid var(--clr-grey);
+}
+@media screen and (max-width: 768px) {
+  .politics .grid-child-5 {
+    display: none;
+  }
+}
+.politics .grid-child-5 .politics__address, .politics .grid-child-5 .politics__phone {
+  font-size: 33px;
+}
+@media screen and (max-width: 1600px) {
+  .politics .grid-child-5 .politics__address, .politics .grid-child-5 .politics__phone {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .politics .grid-child-5 .politics__address, .politics .grid-child-5 .politics__phone {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .politics .grid-child-5 .politics__address, .politics .grid-child-5 .politics__phone {
+    font-size: 16px;
+  }
+}
+.politics .grid-child-5 .politics__phone a {
+  color: var(--clr-text);
+  text-decoration: none;
+}
+.politics .grid-child-6 {
+  grid-area: rights;
+  color: #D3D3D3;
+  padding-top: 100px;
+}
+@media screen and (max-width: 1200px) {
+  .politics .grid-child-6 {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .politics .grid-child-6 {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .politics .grid-child-6 {
+    display: none;
+  }
+}
+.politics .grid-child-7 {
+  color: #D3D3D3;
+  grid-area: copyright;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 100px;
+}
+@media screen and (max-width: 1200px) {
+  .politics .grid-child-7 {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .politics .grid-child-7 {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .politics .grid-child-7 {
+    padding-top: 0;
+    font-size: 16px;
+    justify-content: flex-start;
+  }
+}
+.politics .grid-child-7 a {
+  color: #D3D3D3;
+}
+@media screen and (max-width: 768px) {
+  .politics .grid-child-7 a {
+    display: none;
+  }
+}
+
 .prev svg {
   transform: rotate(180deg);
 }
